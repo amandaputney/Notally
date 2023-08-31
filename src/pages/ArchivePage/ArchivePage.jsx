@@ -1,6 +1,6 @@
 import { checkToken } from "../../utilities/users-service";
 
-export default function OrderHistoryPage () {
+export default function ArchivePage () {
     async function handleCheckToken() {
         const expDate = await checkToken(); 
         console.log(expDate)
@@ -10,7 +10,7 @@ export default function OrderHistoryPage () {
     return (
 //must wrap below in <> </> to return a single root component/node
     <>
-        <h1>OrderHistoryPage</h1>
+        <h1>Archive</h1>
         <button onClick={ handleCheckToken }>Check When My Login Expires</button>
     </>
     );
