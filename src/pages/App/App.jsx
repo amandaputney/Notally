@@ -6,9 +6,19 @@ import NewNotePage from '../NewNotePage/NewNotePage';
 import AuthPage from '../AuthPage/AuthPage';
 import ArchivePage from '../ArchivePage/ArchivePage';
 import NavBar from '../../components/NavBar/NavBar';
+import NewNoteForm from '../../components/NewNoteForm/NewNoteForm';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
+   const [notes, setNotes] = useState([
+    { text: "test", user: "" },
+
+  ]);
+
+  function addNote(note) {
+    const newNotes = [];
+    setNotes(newNotes);
+  }
 
   return (
     <main className="App">
@@ -22,6 +32,11 @@ export default function App() {
               <Route path="/notes/new/" element={<NewNotePage />}/>
               <Route path="/notes" element={<ArchivePage />}/>
             </Routes>
+              <hr />
+                <h1>NOTALLY</h1>
+                {/* <NoteList notes={notes} /> */}
+                <NewNoteForm addNote={addNote} />
+
           </>
               :
           <AuthPage setUser={setUser}/>
