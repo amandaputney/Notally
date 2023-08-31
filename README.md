@@ -1,50 +1,43 @@
-# MERN-Stack
+# Notally
 
-Template for future MERN-Stack projects
+## The Note Model
 
-## How-to
+This app is user-centric, only the notes for the logged in user should be displayed.
 
-Here’s the process to create a new MERN-Stack project that starts with the infrastructure code:
+The schema for notes will be minimal with only the following two properties:
 
-### 1. Clone Repo
+Property Name Property Type Validation(s)
+text String required
+user ObjectId required
 
-Clone the mern-infrastructure repo: git clone url of mern-infrastructure name-of-project
-Note that the folder created will be same as name-of-project instead of mern-infrastructure
+Use the timestamps: true option so that the createdAt property can be used to display the date & time of each note.
 
-cd name-of-project
+## MVP User Stories
 
-### 2. Install the Node modules:
+AAV, I want to see an auth page to sign-up or log in so that I can create notes.
 
-npm i
+AAU, I want to see a [Log Out] link/button to return to the auth page.
 
-### 3. Create a .env (touch .env) and add entries for DATABASE_URL and SECRET
+AAU, I want to see a “No Notes Yet!” message if I have yet to enter any.
 
-### 4. Update Project Name
+AAU, I want to see a listing of all of my previously entered notes including the text and date & time (createdAt property) for each note.
 
-Update the "name" : "mern-infrastructure" in package.json to the name of your project.
+Use the toLocaleString() method to better format the date/time.
 
-### 5. Create a new repo on your personal GH account.
+AAU, when I click the [Add Note] button to add a new note, I want to see it appear in the list of existing notes.
 
-Copy the new GH repo’s URL.
+AAU, I want to see an INPUT or TEXTAREA and an [Add Note] button above the listing of notes that I can use to enter a new note.
 
-### 6. Update the remote’s URL
+## Bonus User Stories
 
-git remote set-url origin paste the copied GH url
+AAU, I want to be able to toggle the display of the notes between ascending & descending date (createdAt).
 
-### 7. Make the initial commit
+AAU, I want to be able to delete a note.
 
-git add -A && git commit -m "Initial commit"
+## Super Bonus User Story
 
-### 8. Push for the first time
-
-git push -u origin main
-
-### 9. Have fun!
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+AAU, I want to be able to edit a note.
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+https://create-react-app.dev/docs/deployment/
