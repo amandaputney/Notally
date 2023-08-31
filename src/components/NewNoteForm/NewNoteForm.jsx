@@ -21,8 +21,8 @@ export default function NewNoteForm({ addNote }) {
   return (
     <form className="NewNoteForm" onSubmit={handleSubmit}>
       <label>Note</label>
-      <input name="note" type= "textarea"  value= {formData.text} onChange={handleChange} />
-      <button type="submit">ADD NOTE</button>
+      <textarea  value= {formData.text} onChange={handleChange} />
+      <input type="submit" value="Submit" />
     </form>
   );
 }

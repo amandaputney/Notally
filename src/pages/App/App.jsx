@@ -22,6 +22,7 @@ export default function App() {
 
   return (
     <main className="App">
+      <h1>NOTALLY</h1>
       {/* is user truthy */}
         { user ? 
           <>
@@ -33,7 +34,6 @@ export default function App() {
               <Route path="/notes" element={<ArchivePage />}/>
             </Routes>
               <hr />
-                <h1>NOTALLY</h1>
                 {/* <NoteList notes={notes} /> */}
                 <NewNoteForm addNote={addNote} />
 
